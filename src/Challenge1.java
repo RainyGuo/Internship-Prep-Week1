@@ -12,7 +12,7 @@ public class Challenge1 {
     }
 
     public int duplicateDeleter(int[] arr) {
-        if (arr.length <= 1) {
+        if (arr.length <= 1 || arr == null) {
             return arr.length;
         }
         int currentSpot = 0;
