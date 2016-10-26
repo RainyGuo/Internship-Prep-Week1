@@ -1,8 +1,22 @@
- /**
+import java.util.Arrays;
+
+/**
  * Created by szane on 10/25/2016.
  */
 public class Challenge3 {
-    public int[] spiral(int[][] arr) {
+
+     public static void main(String args[]) {
+         Challenge3 test = new Challenge3();
+         int[][] matrix = {
+                 {1, 2, 3 ,4},
+                 {5, 6, 7, 8},
+                 {9, 10, 11, 12},
+                 {13, 14, 15, 16}
+         };
+         System.out.println(Arrays.toString(test.spiral(matrix)));
+     }
+
+     public int[] spiral(int[][] arr) {
         int ordered[] = new int[arr.length * arr[0].length];
 
         int counter = 0;
@@ -30,7 +44,7 @@ public class Challenge3 {
             }
 
             for (int loop = 0; loop < columns - 1; loop++) {
-                ordered[counter++] = arr[x++][y];
+                ordered[counter++] = arr[x][y++];
             }
 
             for (int loop = 0; loop < rows - 1; loop++) {

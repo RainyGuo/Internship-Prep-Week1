@@ -2,6 +2,11 @@
  * Created by szane on 10/25/2016.
  */
 public class Challenge5 {
+    public static void main(String args[]) {
+        Challenge5 test = new Challenge5();
+        System.out.println(test.longestPalindrome("abdbbbbdba"));
+    }
+
     public String longestPalindrome(String s) {
         if (s.isEmpty()) {
             return null;
